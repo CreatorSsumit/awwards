@@ -392,7 +392,7 @@ nav img {
     nav {
         position: inherit;
         background: #000;
-        height: 100px !important;
+        padding: 10px 0;
     }
     #ovr h1 span {
         font-size: 30px;
