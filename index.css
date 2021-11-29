@@ -1,0 +1,468 @@
+@font-face {
+    font-family: love;
+    src: url('./font/Love-Regular.1e9f7e9.ttf');
+}
+
+@font-face {
+    font-family: steinbeck;
+    src: url("./font/SteinbeckRegular.2ddad8b.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: steinbeck;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    scroll-behavior: smooth;
+}
+
+#back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('./img/full_hero.a083b77.png');
+}
+
+#scene {
+    width: 100%;
+    height: 100%;
+    background: black
+}
+
+#scene canvas {
+    width: 100%;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 4s;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+
+nav a:first-child {
+    margin-left: 0px;
+    color: red;
+}
+
+nav img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ovr {
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    padding-top: 100px;
+}
+
+#ovr h1 {
+    color: transparent;
+    font-family: love;
+    text-transform: uppercase;
+    font-size: 110px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+#ovr>:first-child::before {
+    content: 'The Best';
+}
+
+#ovr>:nth-child(2)::before {
+    content: 'Of &  web';
+}
+
+#ovr>:nth-child(3):before {
+    content: 'Annual Awards';
+}
+
+#ovr>:nth-child(4)::before {
+    content: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> A, nihil! consectetur adipisicing elit. Suscipit, vel!';
+}
+
+#ovr>h1::before {
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    position: absolute;
+    color: white;
+    opacity: 0;
+    left: 0;
+    animation: upward 6s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+}
+
+@keyframes upward {
+    to {
+        top: 0%;
+        opacity: 1;
+    }
+}
+
+#ovr span {
+    font-size: 80px;
+    color: red;
+    font-weight: 550;
+    margin: 0 20px 20px 20px;
+}
+
+#scnh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ovr p {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.6;
+    font-weight: 100;
+}
+
+#circle {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: rotate 12s linear infinite both;
+}
+
+#mini {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: red;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 1.5s;
+}
+
+#circle:hover #mini {
+    width: 80px;
+    height: 80px;
+    background-image: url('./img/full_hero.a083b77.png');
+    background-position: center;
+    background-size: 430% 430%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#about {
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+    display: flex;
+}
+
+#leftabt {
+    width: 50%;
+    min-height: inherit;
+    position: relative;
+}
+
+#rightabt {
+    width: 50%;
+    min-height: inherit;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 0px 100px;
+    color: grey;
+    font-weight: 600;
+}
+
+#about h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 33px;
+}
+
+#plx {
+    position: absolute;
+    right: 0;
+    top: 56%;
+    width: 60%;
+    height: 130px;
+    background: yellow;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("./img/full_hero.a083b77.png");
+}
+
+#rightabt p {
+    margin-top: 30px;
+    font-size: 16px;
+    width: 80%;
+}
+
+#hof {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#hof img {
+    margin-bottom: 30px;
+}
+
+#hof h1 {
+    margin: 30px 0;
+    font-family: love;
+    font-size: 100px;
+    font-weight: 100;
+}
+
+#pmain {
+    display: flex;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    justify-content: space-around;
+}
+
+.pdata {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    color: grey;
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: 3px;
+    line-height: 17px;
+}
+
+.timeline {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 {
+    width: 40%;
+    min-height: inherit;
+    color: white;
+}
+
+.row2 {
+    width: 40%;
+    min-height: inherit;
+}
+
+.row3 {
+    width: 18%;
+    min-height: inherit;
+    color: white;
+    text-align: right;
+}
+
+.row3 h1 {
+    font-family: love;
+    font-size: 90px;
+    color: white;
+    font-weight: 100;
+}
+
+.elem {
+    margin-bottom: 120px;
+}
+
+.row2 .elem {
+    margin-top: 32%
+}
+
+.elem h1 {
+    font-size: 25px;
+    display: flex;
+    align-items: flex-start;
+    color: white
+}
+
+.elem h1 span {
+    font-size: 12px;
+    margin-left: 5px;
+    color: grey;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.banner {
+    width: 100%;
+    height: 350px;
+    margin: 40px 0;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://annual.awwwards.com/_nuxt/img/site2019.d2ac407.jpg");
+}
+
+.elem h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+    color: white
+}
+
+.elem h5 {
+    font-weight: 700;
+    color: grey;
+    margin-top: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.548);
+    margin-top: 30px;
+}
+
+#credits {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+    #ovr {
+        padding: 100px 20px;
+    }
+    #ovr h1 {
+        color: transparent;
+        font-family: love;
+        text-transform: uppercase;
+        font-size: 60px;
+        text-align: center;
+        font-weight: 200;
+        line-height: 90px;
+    }
+    nav img {
+        margin-top: 40px;
+    }
+    nav {
+        position: inherit;
+        background: #000;
+        height: 100px !important;
+    }
+    #ovr h1 span {
+        font-size: 30px;
+        margin: 20px
+    }
+    #scene canvas {
+        width: 100% !important;
+        height: auto;
+        transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 4s;
+    }
+    #about {
+        display: inherit;
+    }
+    #leftabt {
+        width: 100%;
+    }
+    #rightabt {
+        width: 100%;
+    }
+    #scene {
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+    }
+    #plx {
+        position: absolute;
+        right: 0;
+        top: 46%;
+        width: 70%;
+        height: 330px;
+        background: yellow;
+        background-image: url('./img/full_hero.a083b77.png');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #rightabt {
+        width: 100%;
+        padding: 20px 0px 0px 0px;
+    }
+    #srabt {
+        margin-top: -140px;
+    }
+    #pmain {
+        width: 100%;
+        left: 0%;
+        height: 90%;
+        padding: 27px;
+    }
+    .row1 {
+        width: 30%;
+        min-height: inherit;
+        color: white;
+    }
+    .row2 {
+        width: 60%;
+        min-height: inherit;
+        margin-left: 20px;
+    }
+    .row3 {
+        min-height: inherit;
+        color: white;
+        text-align: right;
+    }
+    .row3 h1 {
+        font-family: love;
+        font-size: 15px !important;
+        color: white;
+        font-weight: 700;
+    }
+    #ovr>:nth-child(2) span {
+        display: none;
+    }
+}
