@@ -23,6 +23,14 @@ body {
     scroll-behavior: smooth;
 }
 
+.circle {
+	position: absolute;
+  border: solid 1px #ccc;
+	width: 60px; 
+	height: 60px; 
+  border-radius: 50%;  
+}
+
 #back {
     width: 100%;
     height: 100%;
