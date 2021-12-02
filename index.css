@@ -28,7 +28,8 @@ body {
   border: solid 1px #ccc;
 	width: 60px; 
 	height: 60px; 
-  border-radius: 50%;  
+  border-radius: 50%;
+	z-index:99999999 !important;
 }
 
 #back {
