@@ -54,7 +54,7 @@ anim(150)
 
 
 
-jQuery(document).ready(function() {
+$(document).ready(function() {
 
   var mouseX = 0, mouseY = 0;
   var xp = 0, yp = 0;
